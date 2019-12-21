@@ -11,23 +11,9 @@
 //mine
 #include "../List/List.hpp"
 
-class Prime{
-    public:
-        //constructor
-        Prime(const std::string& filePath);
-        //destructor
-        ~Prime();
-        //static attribute
-        //static member
-        //member
-        void calc(void);
-        //friendly operator
-        //operator
-    protected:
-        //attribute
-        std::fstream m_file;
-        List<unsigned long long> m_dm;
-        //member
+namespace prime{
+        void calc(const std::string& filePath, const long long& number);
+        void calc(const std::string& filePath, const long long& number, const int& RATIO_PER_LINE, const double& RATIO_TOTAL);
 };
 
-#endif // PRIME_HPP
+#endif /* PRIME_HPP */
