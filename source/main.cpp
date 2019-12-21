@@ -1,9 +1,9 @@
 #include <iostream>
-#include "class\Prime\Prime.hpp"
+#include ".\class\Prime\Prime.hpp"
 
 using namespace std;
 
-int main(int argc, char *argv[]){
+int main(int argc, char* argv[]){
     cout << endl;
     cout << "|=================|" << endl;
     cout << "|Programme started|" << endl;
