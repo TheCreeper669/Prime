@@ -66,9 +66,9 @@ void choice(const vector<char*>& args) {
         total *= per_line;
         //
         if (total == 0)
-            scp::prime::calc("./prime_" + name + ".txt", number);
+            prime::calc("./prime_" + name + ".txt", number);
         else
-            scp::prime::calc("./prime_" + name + ".txt", number, per_line, total);
+            prime::calc("./prime_" + name + ".txt", number, per_line, total);
     } else if (args.size() == 1 && strncmp(args[0], "--help", 6) == 0) {
         cout << endl;
         cout << "Help:" << endl;
@@ -102,12 +102,12 @@ void choice(const vector<char*>& args) {
             cout << endl;
             cout << "How many lines: " << total / per_line << endl;
             //
-            scp::prime::calc("./prime_" + name + ".txt", number, per_line, total);
+            prime::calc("./prime_" + name + ".txt", number, per_line, total);
         } else {
             cout << endl;
             cout << "Without loading bar." << endl;
             //
-            scp::prime::calc("./prime_" + name + ".txt", number);
+            prime::calc("./prime_" + name + ".txt", number);
         }
     }
 }
