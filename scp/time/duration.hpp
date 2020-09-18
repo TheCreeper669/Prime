@@ -24,7 +24,7 @@ Duration::~Duration(void) {
     std::chrono::high_resolution_clock::duration duration = std::chrono::high_resolution_clock::now() - m_time_at_start;
     std::cout << "Duration: " << std::chrono::duration_cast<std::chrono::nanoseconds>(duration).count() << "ns" << std::endl;
     if (std::chrono::duration_cast<std::chrono::nanoseconds>(duration).count() >= 1000)
-        std::cout << "      or: " << std::chrono::duration_cast<std::chrono::microseconds>(duration).count() << "\xe6s" << std::endl;
+        std::cout << "      or: " << std::chrono::duration_cast<std::chrono::microseconds>(duration).count() << "µs" << std::endl;
     if (std::chrono::duration_cast<std::chrono::microseconds>(duration).count() >= 1000)
         std::cout << "      or: " << std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() << "ms" << std::endl;
     if (std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() >= 1000)

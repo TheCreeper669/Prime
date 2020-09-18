@@ -57,15 +57,16 @@ void ProgressBar::display_start(void) {
         std::cout << "-";
     std::cout << "| " << m_total_char / m_char_per_line << std::endl;
     std::cout << "|";
+    std::cout << std::flush;
 }
 
 void ProgressBar::actualize_display(const uint64_t& current, const uint64_t& total) {
     m_char_to_display = static_cast<int>((static_cast<double>(current) / static_cast<double>(total)) * m_total_char);
     while (m_char_to_display > m_displayed_char) {
-        std::cout << "=";
+        std::cout << "=" << std::flush;
         m_displayed_char++;
         if (m_displayed_char % m_char_per_line == 0)
-            std::cout << "| " << m_displayed_char / m_char_per_line << " / " << m_total_char / m_char_per_line << std::endl << "|";
+            std::cout << "| " << m_displayed_char / m_char_per_line << " / " << m_total_char / m_char_per_line << std::endl << "|" << std::flush;
     }
 }
 
